@@ -7,14 +7,14 @@ function buscarProd(id_prod){
 class Carrito {
     #privatefield
 
-    constructor(id, timestamp, productos) {
+    constructor(id) {
         this.#privatefield.id = id;
         this.#privatefield.timestamp = new Date.toLocaleString();
         this.#privatefield.productos = [];
     }
 
-    listar(id){
-
+    listar(){
+        return this.#privatefield.productos;
     }
 
     agregar(id_prod){
