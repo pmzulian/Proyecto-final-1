@@ -28,6 +28,17 @@ class ArregloProd {
        return found ? found : `No existe producto con el id ${id}`
     }
 
+    actualizar(id, body){
+        let found = this.productos.find(prod => prod.id == id);
+
+        if (found){
+            found = Object.assign(found, body)
+            return found
+        }else{
+            return `No hay producto con el id ${id}`;
+        }
+    }
+
     borrar(id) {
         const index = this.productos.findIndex((prod) => prod.id == id);
         return this.productos.splice(index, 1);

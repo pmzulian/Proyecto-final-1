@@ -30,9 +30,10 @@ routerProductos.get("/listar/:id", (req, res) => {
 });
 
 //=====================================================================
-//Creamos la estructura con express.router
 routerProductos.put("/actualizar/:id", (req, res) => {
-    const ubicacion = req.params.id;
+    res.send(productos.actualizar(req.params.id, req.body));
+
+    /*    const ubicacion = req.params.id;
     const actualizar = req.body;
 
     if (ubicacion <= productos.productos.length) {
@@ -47,7 +48,7 @@ routerProductos.put("/actualizar/:id", (req, res) => {
         });
     } else {
         res.send("No hay producto con el índice " + ubicacion);
-    }
+    }*/
 });
 
 routerProductos.delete("/borrar/:id", (req, res) => {
