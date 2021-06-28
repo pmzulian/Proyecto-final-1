@@ -20,3 +20,8 @@ app
         console.log(`Escuchando peticiones puerto localhost:${puerto}`)
     )
     .on("error", (error) => console.log(`Error en servidor ${error}`));
+
+
+//Importamos rutas del carrito y usamos prefijo "/carrito"
+const routerCarrito = require("./routers/carrito");
+app.use("/carrito", routerCarrito);
