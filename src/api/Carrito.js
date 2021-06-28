@@ -28,7 +28,13 @@ class Carrito {
     }
 
     borrar(id_prod){
-
+        let index = this.#privatefield.productos.findIndex((prod) => prod.id == id_prod);
+        if(index !== -1){
+            // return this.productos[index]
+            return this.#privatefield.productos.splice(index, 1);
+        }else{
+            return `No hay producto con el id ${id_prod}`;
+        }
     }
 }
 
