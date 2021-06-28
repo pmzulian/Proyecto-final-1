@@ -41,7 +41,7 @@ class ArregloProd {
 
     borrar(id) {
         let index = this.productos.findIndex((prod) => prod.id == id);
-        if(index != -1){
+        if(index !== -1){
             // return this.productos[index]
             return this.productos.splice(index, 1);
         }else{
