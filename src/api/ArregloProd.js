@@ -40,8 +40,13 @@ class ArregloProd {
     }
 
     borrar(id) {
-        const index = this.productos.findIndex((prod) => prod.id == id);
-        return this.productos.splice(index, 1);
+        let index = this.productos.findIndex((prod) => prod.id == id);
+        if(index != -1){
+            // return this.productos[index]
+            return this.productos.splice(index, 1);
+        }else{
+            return `No hay producto con el id ${id}`;
+        }
     }
 }
 
