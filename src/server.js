@@ -12,7 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 
 //Importo las rutas y las uso con el prefijo /productos
-const routerProductos = require('./routers/productos')
+const {routerProductos} = require('./routers/productos')
+
 app.use('/productos', routerProductos);
 
 app

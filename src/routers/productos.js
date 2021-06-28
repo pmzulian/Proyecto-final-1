@@ -44,4 +44,10 @@ routerProductos.get("/vista", (req, res) => {
     res.render("lista.hbs", { productos: prods, hayProductos: prods.length });
 });
 
-module.exports = routerProductos;
+// exports.routerProductos = routerProductos;
+// exports.existencias = productos;
+
+module.exports = {
+    routerProductos,
+    productos
+}
