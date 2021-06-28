@@ -2,6 +2,7 @@ const express = require("express");
 const routerProductos = express.Router();
 
 const productos = require("../api/ArregloProd");
+// console.log((productos))
 const Producto = require("../api/Producto");
 
 //=====================================================================
@@ -46,6 +47,17 @@ routerProductos.get("/vista", (req, res) => {
 
 // exports.routerProductos = routerProductos;
 // exports.existencias = productos;
+
+const producto1 = new Producto(
+    0, "Auriculares Sony", "Sony Noise Cancelling", "002", "", 30000, 200
+)
+
+const producto2 = new Producto(
+    1, "Auriculares Philips", "Philips Blutooth", "003", "", 10000, 150
+)
+
+// productos.guardar(producto1);
+// productos.guardar(producto2);
 
 module.exports = {
     routerProductos,
