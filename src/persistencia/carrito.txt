@@ -1,0 +1,16 @@
+{
+	"id": 1,
+	"timestamp": "29/6/2021 16:15:33",
+	"productos_carrito": [
+		{
+			"id": "1",
+			"timestamp": "29/6/2021 16:15:42",
+			"nombre": "SmarTV Samsung",
+			"descripcion": "SmarTV de 60 pulgadas",
+			"codigo": "002",
+			"foto": "https://www.flaticon.es/icono-gratis/ordenador-de-sobremesa_1792525",
+			"precio": 130000,
+			"stock": 60
+		}
+	]
+}

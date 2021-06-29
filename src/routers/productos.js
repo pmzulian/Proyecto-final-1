@@ -9,7 +9,7 @@ const Producto = require("../api/Producto");
 const {loggerAdmin, loggerUser} = require("./auth")
 
 const ruta = "./src/persistencia/productos.txt";
-const persistir = require("../persistencia/funciones");
+const {persistir} = require("../persistencia/funciones");
 
 //=====================================================================
 routerProductos.use(loggerUser)
@@ -19,8 +19,12 @@ routerProductos.get("/listar", (req, res) => {
         if(error){
             res.send(error)
         }else{
-            const objeto = JSON.parse(contenido)
-            res.send(objeto)
+            try {
+                res.send(JSON.parse(contenido))
+            }catch{
+                res.send("No hay existencias")
+            }
+
         }
     })
 })
