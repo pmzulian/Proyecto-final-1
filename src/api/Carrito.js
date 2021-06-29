@@ -1,4 +1,5 @@
-const {productos: existencias} = require("../routers/productos")
+const {productos: existencias} = require("../routers/productos");
+const {v1} = require("uuid");
 
 function buscarProd(id_prod){
     return existencias.productos.find(p => p.id == id_prod)
@@ -7,7 +8,7 @@ function buscarProd(id_prod){
 class Carrito {
 
     constructor(id) {
-        this.id = 1;
+        this.id = v1();
         this.timestamp = new Date().toLocaleString();
         this.productos_carrito = [];
     }

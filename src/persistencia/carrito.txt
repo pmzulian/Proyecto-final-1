@@ -1,10 +1,20 @@
 {
-	"id": 1,
-	"timestamp": "29/6/2021 16:15:33",
+	"id": "c91c1610-d90f-11eb-abfd-8d92452fa3fb",
+	"timestamp": "29/6/2021 16:25:38",
 	"productos_carrito": [
 		{
+			"id": "0",
+			"timestamp": "29/6/2021 16:25:47",
+			"nombre": "Lenovo Legion 5i",
+			"descripcion": "Laptop Gamer de Lenovo",
+			"codigo": "001",
+			"foto": "https://www.flaticon.es/icono-gratis/ordenador-de-sobremesa_1792525",
+			"precio": 160000,
+			"stock": 45
+		},
+		{
 			"id": "1",
-			"timestamp": "29/6/2021 16:15:42",
+			"timestamp": "29/6/2021 16:25:49",
 			"nombre": "SmarTV Samsung",
 			"descripcion": "SmarTV de 60 pulgadas",
 			"codigo": "002",
