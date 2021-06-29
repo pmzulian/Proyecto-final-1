@@ -1,4 +1,4 @@
-let admin = false;
+let admin = true;
 let user = true;
 
 const loggerAdmin = (req, res, next) =>{
