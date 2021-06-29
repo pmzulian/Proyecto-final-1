@@ -3,6 +3,9 @@ const routerCarrito = express.Router();
 
 const carrito = require("../api/Carrito");
 // console.log(carrito)
+
+const {loggerUser} = require("./auth")
+routerCarrito.use(loggerUser)
 //=====================================================================
 routerCarrito.get("/agregar/:id", (req, res) => {
     res.send(carrito.agregar(req.params.id))

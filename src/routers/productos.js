@@ -5,7 +5,16 @@ const productos = require("../api/ArregloProd");
 // console.log((productos))
 const Producto = require("../api/Producto");
 
+const {loggerAdmin, loggerUser} = require("./auth")
+
 //=====================================================================
+routerProductos.use(loggerUser)
+routerProductos.get("/listar", (req, res) => {
+    res.send(productos.listarTodos());
+});
+
+//=====================================================================
+routerProductos.use(loggerAdmin)
 routerProductos.post("/agregar", (req, res) => {
     const productoNuevo = new Producto(
         req.body.id,
@@ -19,10 +28,6 @@ routerProductos.post("/agregar", (req, res) => {
     productos.guardar(productoNuevo);
     res.send(productoNuevo);
     //res.redirect("/productos/vista");
-});
-
-routerProductos.get("/listar", (req, res) => {
-    res.send(productos.listarTodos());
 });
 
 routerProductos.get("/listar/:id", (req, res) => {
@@ -48,13 +53,13 @@ routerProductos.get("/vista", (req, res) => {
 // exports.routerProductos = routerProductos;
 // exports.existencias = productos;
 
-const producto1 = new Producto(
+/*const producto1 = new Producto(
     0, "Auriculares Sony", "Sony Noise Cancelling", "002", "", 30000, 200
 )
 
 const producto2 = new Producto(
     1, "Auriculares Philips", "Philips Blutooth", "003", "", 10000, 150
-)
+)*/
 
 // productos.guardar(producto1);
 // productos.guardar(producto2);

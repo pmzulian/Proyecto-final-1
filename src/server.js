@@ -1,6 +1,6 @@
 const express = require("express");
 const handlebars = require("express-handlebars");
-
+// const auth = require("./routers/auth");
 const app = express();
 
 const puerto = 8080 || process.env.PUERTO;
@@ -13,7 +13,7 @@ app.use(express.static(__dirname + "/public"));
 
 //Importo las rutas y las uso con el prefijo /productos
 const {routerProductos} = require('./routers/productos')
-
+// app.use(auth)
 app.use('/productos', routerProductos);
 
 app
