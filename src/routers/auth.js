@@ -1,5 +1,5 @@
 let admin = false;
-let user = false;
+let user = true;
 
 const loggerAdmin = (req, res, next) =>{
     if(admin === true && user === true){
